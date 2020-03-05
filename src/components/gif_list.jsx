@@ -2,9 +2,15 @@ import React, { Component } from 'react';
 import Gif from './gif'
 
 class GifList extends Component {
+  selectClick = () => {
+
+  }
+
   renderList = () => {
     return this.props.gifs.map(gif => {
-        return <Gif id={gif.id} key={gif.id} />
+        return <Gif id={gif.id} key={gif.id}
+          onclick={console.log('test')}
+        />
       })
   }
 
